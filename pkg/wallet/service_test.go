@@ -37,7 +37,7 @@ func TestService_FindAccountByID_NotFound(t *testing.T) {
 	}
 }
 
-func TestService_FindPaymentById_success(t *testing.T) { 
+func TestService_FindPaymentByID_success(t *testing.T) { 
 	svc := &Service{}
 
 	payment := &types.Payment{
@@ -50,7 +50,7 @@ func TestService_FindPaymentById_success(t *testing.T) {
 
 	expected := payment
 
-	result, _ := svc.FindPaymentById(payment.ID)
+	result, _ := svc.FindPaymentByID(payment.ID)
 
 	if !reflect.DeepEqual(expected, result) {
 		t.Errorf("invalid result, expected: %v, actual: %v", expected, result)

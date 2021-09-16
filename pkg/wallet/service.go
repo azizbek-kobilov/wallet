@@ -130,7 +130,7 @@ func (s *Service) Reject(paymentID string) error {
 	return ErrPaymentNotFound
 }
 
-func (s *Service) FindPaymentById(paymentID string) (*types.Payment, error) {
+func (s *Service) FindPaymentByID(paymentID string) (*types.Payment, error) {
 	for _, payment := range s.payments {
 		if payment.ID == paymentID {
 			return payment, nil
